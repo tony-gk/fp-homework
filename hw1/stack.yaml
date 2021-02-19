@@ -1,0 +1,11 @@
+resolver: lts-16.5
+
+packages: 
+- hw1
+- practice
+
+extra-deps: []
+
+flags: {}
+
+extra-package-dbs: []

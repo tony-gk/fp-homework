@@ -1,0 +1,13 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "hw3:lib"
+
+    - path: "./app/Main.hs"
+      component: "hw3:exe:stack"
+
+    - path: "./app/Paths_hw3.hs"
+      component: "hw3:exe:stack"
+
+    - path: "./test"
+      component: "hw3:test:hw3-test"

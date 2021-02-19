@@ -1,0 +1,61 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: d1259917882dda584fe268da3b0bdb84ea64064cc30032e016f432386f52f13e
+
+name:           hw2
+version:        0.1.0.0
+description:    Homework 2 for FP ITMO course
+build-type:     Simple
+
+library
+  exposed-modules:
+      Block1.Task1
+      Block1.Task2
+      Block1.Task3
+      Block2.Task1
+      Block2.Task2
+      Block3.Task1
+      Block3.Task2
+      Block3.Task3
+      Block3.Task4
+      Bonus
+      Practice
+  other-modules:
+      Paths_hw2
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base >=4.9 && <5
+    , containers
+    , mtl
+  default-language: Haskell2010
+
+test-suite hw2-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Block1.Task1Spec
+      Block2.Task1Spec
+      Block3.Task2Spec
+      Block3.Task3Spec
+      Block3.Task4Spec
+      Paths_hw2
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.9 && <5
+    , containers
+    , hedgehog
+    , hspec
+    , hw2
+    , mtl
+    , tasty
+    , tasty-hedgehog
+    , tasty-hspec
+  default-language: Haskell2010

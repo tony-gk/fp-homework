@@ -1,0 +1,32 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 80e6f9084d097ad85ca3c31a8249e5f2182ff76f8a991ebb90fdb45c5d24e2fd
+
+name:           practice
+version:        0.1.0.0
+description:    Practice for FP ITMO course
+build-type:     Simple
+
+library
+  exposed-modules:
+      Task2
+      Task3
+      Task4
+      Task5
+      Task6
+      Task7
+      Task8
+  other-modules:
+      Paths_practice
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base >=4.9 && <5
+    , containers
+    , mtl
+  default-language: Haskell2010

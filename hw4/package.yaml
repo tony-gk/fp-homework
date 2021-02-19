@@ -1,0 +1,76 @@
+name:         hw4
+version:      0.1.0.0
+description:  Homework 4 for FP ITMO course 
+
+dependencies: 
+- base >= 4.9 && < 5
+- deepseq
+- parallel
+- stm
+- async
+- split
+- microlens
+- random
+- vector
+- hashable
+- directory
+- filepath
+- comonad
+  
+library:
+  source-dirs:           src
+  ghc-options: 
+    - -Wall
+      
+benchmarks:
+  geometry:
+    main:                Bench.hs           
+    source-dirs:         bench/geometry
+    ghc-options:
+    - -Wall
+    - -O2
+    dependencies:
+    - hw4
+    - criterion
+  integrate:
+    main:                Bench.hs
+    source-dirs:         bench/integrate
+    ghc-options:
+    - -Wall
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -O2
+    dependencies:
+    - hw4
+    - criterion
+  hashtable:
+    main:                Bench.hs
+    source-dirs:         bench/hashtable
+    ghc-options:
+    - -Wall
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    - -O2
+    dependencies:
+    - hw4
+    - criterion
+
+
+tests:
+  hw4-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -Wall
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies: 
+    - hw4
+    - tasty
+    - tasty-hspec 
+    - tasty-hedgehog
+    - hspec
+    - hedgehog

@@ -1,0 +1,30 @@
+name:         hw2
+version:      0.1.0.0
+description:  Homework 2 for FP ITMO course 
+
+dependencies: 
+- base >= 4.9 && < 5
+- mtl
+- containers
+
+library:
+  source-dirs:           src
+  ghc-options: 
+    - -Wall
+
+tests:
+  hw2-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -Wall
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies: 
+    - hw2
+    - tasty
+    - tasty-hspec 
+    - tasty-hedgehog
+    - hspec
+    - hedgehog

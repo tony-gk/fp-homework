@@ -1,0 +1,28 @@
+name:         hw1
+version:      0.1.0.0
+description:  Homework 1 for FP ITMO course 
+
+dependencies: 
+- base >= 4.9 && < 5
+
+library:
+  source-dirs:           src
+  ghc-options: 
+    - -Wall
+
+tests:
+  hw1-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -Wall
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies: 
+    - hw1
+    - tasty
+    - tasty-hspec 
+    - tasty-hedgehog
+    - hspec
+    - hedgehog

@@ -1,0 +1,7 @@
+cradle:
+  stack:
+    - path: "hw1/src"
+      component: "hw1:lib"
+
+    - path: "hw1/test"
+      component: "hw1:test:hw1-test"

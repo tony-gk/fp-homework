@@ -1,0 +1,13 @@
+name:         practice
+version:      0.1.0.0
+description:  Practice for FP ITMO course 
+
+dependencies: 
+- base >= 4.9 && < 5
+- containers
+- mtl
+
+library:
+  source-dirs:           src
+  ghc-options: 
+    - -Wall

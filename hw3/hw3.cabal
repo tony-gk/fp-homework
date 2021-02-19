@@ -1,0 +1,82 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 8132ad40a1790aa7eee4db18e25a5dd67f298705fab1d173e7f5a7d3a80ef7e2
+
+name:           hw3
+version:        0.1.0.0
+description:    Homework 3 for FP ITMO course
+build-type:     Simple
+
+library
+  exposed-modules:
+      CommandLine
+      FileSystem
+      FileSystemInterface
+      PureFileSystem
+      Utils
+  other-modules:
+      Paths_hw3
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      base >=4.9 && <5
+    , directory
+    , exceptions
+    , filepath
+    , microlens
+    , microlens-mtl
+    , mtl
+    , optparse-applicative
+    , text
+    , time
+  default-language: Haskell2010
+
+executable stack
+  main-is: Main.hs
+  other-modules:
+      Paths_hw3
+  hs-source-dirs:
+      app
+  build-depends:
+      base >=4.9 && <5
+    , directory
+    , exceptions
+    , filepath
+    , hw3
+    , microlens
+    , microlens-mtl
+    , mtl
+    , optparse-applicative
+    , text
+    , time
+  default-language: Haskell2010
+
+test-suite hw3-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      PureFSSpec
+      UtilsSpec
+      Paths_hw3
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      base >=4.9 && <5
+    , directory
+    , exceptions
+    , filepath
+    , hspec
+    , hw3
+    , microlens
+    , microlens-mtl
+    , mtl
+    , optparse-applicative
+    , text
+    , time
+  default-language: Haskell2010

@@ -1,0 +1,152 @@
+cabal-version: 1.12
+
+-- This file has been generated from package.yaml by hpack version 0.33.0.
+--
+-- see: https://github.com/sol/hpack
+--
+-- hash: 2362ee1349e289aaa99a976ad3688e058988f69213353581702f8d357a692e82
+
+name:           hw4
+version:        0.1.0.0
+description:    Homework 4 for FP ITMO course
+build-type:     Simple
+
+library
+  exposed-modules:
+      Task1
+      Task2
+      Task3
+      Task4
+      Task5
+      Task6
+      Task7
+  other-modules:
+      Paths_hw4
+  hs-source-dirs:
+      src
+  ghc-options: -Wall
+  build-depends:
+      async
+    , base >=4.9 && <5
+    , comonad
+    , deepseq
+    , directory
+    , filepath
+    , hashable
+    , microlens
+    , parallel
+    , random
+    , split
+    , stm
+    , vector
+  default-language: Haskell2010
+
+test-suite hw4-test
+  type: exitcode-stdio-1.0
+  main-is: Spec.hs
+  other-modules:
+      Task4Spec
+      Task5Spec
+      Paths_hw4
+  hs-source-dirs:
+      test
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N
+  build-depends:
+      async
+    , base >=4.9 && <5
+    , comonad
+    , deepseq
+    , directory
+    , filepath
+    , hashable
+    , hedgehog
+    , hspec
+    , hw4
+    , microlens
+    , parallel
+    , random
+    , split
+    , stm
+    , tasty
+    , tasty-hedgehog
+    , tasty-hspec
+    , vector
+  default-language: Haskell2010
+
+benchmark geometry
+  type: exitcode-stdio-1.0
+  main-is: Bench.hs
+  other-modules:
+      Paths_hw4
+  hs-source-dirs:
+      bench/geometry
+  ghc-options: -Wall -O2
+  build-depends:
+      async
+    , base >=4.9 && <5
+    , comonad
+    , criterion
+    , deepseq
+    , directory
+    , filepath
+    , hashable
+    , hw4
+    , microlens
+    , parallel
+    , random
+    , split
+    , stm
+    , vector
+  default-language: Haskell2010
+
+benchmark hashtable
+  type: exitcode-stdio-1.0
+  main-is: Bench.hs
+  other-modules:
+      Paths_hw4
+  hs-source-dirs:
+      bench/hashtable
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N -O2
+  build-depends:
+      async
+    , base >=4.9 && <5
+    , comonad
+    , criterion
+    , deepseq
+    , directory
+    , filepath
+    , hashable
+    , hw4
+    , microlens
+    , parallel
+    , random
+    , split
+    , stm
+    , vector
+  default-language: Haskell2010
+
+benchmark integrate
+  type: exitcode-stdio-1.0
+  main-is: Bench.hs
+  other-modules:
+      Paths_hw4
+  hs-source-dirs:
+      bench/integrate
+  ghc-options: -Wall -threaded -rtsopts -with-rtsopts=-N -O2
+  build-depends:
+      async
+    , base >=4.9 && <5
+    , comonad
+    , criterion
+    , deepseq
+    , directory
+    , filepath
+    , hashable
+    , hw4
+    , microlens
+    , parallel
+    , random
+    , split
+    , stm
+    , vector
+  default-language: Haskell2010

@@ -1,0 +1,25 @@
+cradle:
+  stack:
+    - path: "./src"
+      component: "hw4:lib"
+
+    - path: "./test"
+      component: "hw4:test:hw4-test"
+
+    - path: "./bench/geometry/Bench.hs"
+      component: "hw4:bench:geometry"
+
+    - path: "./bench/geometry/Paths_hw4.hs"
+      component: "hw4:bench:geometry"
+
+    - path: "./bench/hashtable/Bench.hs"
+      component: "hw4:bench:hashtable"
+
+    - path: "./bench/hashtable/Paths_hw4.hs"
+      component: "hw4:bench:hashtable"
+
+    - path: "./bench/integrate/Bench.hs"
+      component: "hw4:bench:integrate"
+
+    - path: "./bench/integrate/Paths_hw4.hs"
+      component: "hw4:bench:integrate"

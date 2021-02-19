@@ -1,0 +1,41 @@
+name:         hw3
+version:      0.1.0.0
+description:  Homework 3 for FP ITMO course 
+
+dependencies: 
+- base >= 4.9 && < 5
+- microlens
+- microlens-mtl
+- mtl
+- exceptions
+- text
+- time
+- directory
+- filepath
+- optparse-applicative 
+
+  
+executables:
+  stack:
+    main:                Main.hs
+    source-dirs:         app
+    dependencies:
+    - hw3
+
+library:
+  source-dirs:           src
+  ghc-options: 
+    - -Wall
+
+tests:
+  hw3-test:
+    main:                Spec.hs
+    source-dirs:         test
+    ghc-options:
+    - -Wall
+    - -threaded
+    - -rtsopts
+    - -with-rtsopts=-N
+    dependencies: 
+    - hw3
+    - hspec
